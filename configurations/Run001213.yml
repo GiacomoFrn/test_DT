@@ -1,0 +1,49 @@
+run: '001213'
+
+# hit headers
+headers:
+  valid_hit:   2
+  t0_trg:      0
+  tan_psi_trg: 4
+  local_x_trg: 5
+
+# trigger columns: columns where the trigger
+# parameters are stored
+trigger_hit_col:
+  t0_bx: 'BX'
+  t0_tdc: 'TDC_MEAS'
+  tan_psi: 'TDC_MEAS'
+  local_x: 'TDC_MEAS'
+
+# scintillator delays
+scintillator:
+  head: 2
+  fpga: 1
+  tdc_ch: 128
+time_offset_scint: 95.0
+time_offset_sl:
+  0: -1.1
+  1: 6.4
+  2: 0.5
+  3: -2.6
+
+# shift of the SL (x, y, z)
+sl_shift:
+  0: {x: 0, y: 0, z: 219.8}
+  1: {x: 0, y: 0, z: 977.3}
+  2: {x: 0, y: 0, z: 1035.6}
+  3: {x: 0, y: 0, z: 1819.8}
+
+# view of each SL
+sl_view:
+  0: 'phi'
+  1: 'theta'
+  2: 'phi'
+  3: 'phi'
+
+# channel mappings for each SL
+sl_mapping:
+  0: {fpga: 0, ch_start: 0, ch_end: 63}
+  1: {fpga: 0, ch_start: 64, ch_end: 127}
+  2: {fpga: 1, ch_start: 0, ch_end: 63}
+  3: {fpga: 1, ch_start: 64, ch_end: 127}

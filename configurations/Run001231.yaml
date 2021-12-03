@@ -1,0 +1,58 @@
+run: '001232'
+
+# hit headers
+headers:
+  valid_hit:   2
+  t0_trg:      0
+  tan_psi_trg: 4
+  local_x_trg: 5
+
+# trigger columns: columns where the trigger
+# parameters are stored
+trigger_hit_col:
+  t0_bx: 'BX'
+  t0_tdc: 'TDC_MEAS'
+  tan_psi: 'TDC_MEAS'
+  local_x: 'TDC_MEAS'
+
+# scintillator delays
+scintillator:
+  head: 2
+  fpga: 1
+  tdc_ch: 128
+time_offset_scint: 100.0
+time_offset_sl:
+  0: 13.0
+  1: 13.1
+  2: 12.7
+  3: 12.0
+  
+
+# shift of the SL (x, y, z)
+sl_shift:
+  0: {x: 0, y: 0, z: 364.75}
+  1: {x: 0, y: 0, z: 529.75} 
+  2: {x: 0, y: 0, z: 695.75}
+  3: {x: 0, y: 0, z: 790.25}
+
+# view of each SL
+sl_view:
+  0: 'phi'
+  1: 'phi'
+  2: 'phi'
+  3: 'theta'
+  4: 'phi'
+
+# channel mappings for each SL
+sl_mapping:
+  1: {fpga: 0, ch_start: 0, ch_end: 63}
+  0: {fpga: 0, ch_start: 64, ch_end: 127}
+  2: {fpga: 1, ch_start: 0, ch_end: 63}
+  3: {fpga: 1, ch_start: 64, ch_end: 127}
+  
+# macrocell geometry
+mc_z    : 529.75
+mc_x_sx : 63
+mc_x_dx : 231
+mc_x_shift : 126 
+  
